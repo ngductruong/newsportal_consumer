@@ -1,0 +1,24 @@
+
+
+// Chosen
+assets/lib/chosen
+
+-> Make select easier
+-> Website : chosen js
+
+// Bootstrap-datepicker
+-> Datepicker
+
+// Bootstrap-editable
+-> Edit text, links via popup(like in Google translate)
+
+// Bootstrap-modal
+-> Modal dialog
+
+// Bootstrap-Toastr
+-> Make a popup notification on the top-right corner
+-> https://github.com/CodeSeven/toastr
+-> http://www.youtube.com/watch?v=DZ9U4e_Rw9c
+-> toastr is a Javascript library for non-blocking notifications. jQuery is required.
+ The goal is to create a simple core library that can be customized and extended.
+

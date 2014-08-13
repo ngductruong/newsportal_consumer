@@ -1,0 +1,145 @@
+﻿<div class='row'>
+    <div class="col-lg-12 col-md-12 col-sm-12 bg-warning" style="min-height: 100px;">
+    <h3 style="padding-top:5px;margin-top:0px">Demonstration of task managing</h3>
+    <ul>
+        <li>KnockoutJS for data binding</li>
+        <li>DurandalJS for routing & view composition</li>
+        <li>RequireJS for module loading</li>
+        <li>Data is stored in WebAPI application</li>
+    </ul>
+     </div>
+</div>
+
+<div class='row'>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 bg-warning" style="min-height: 100px;">
+        <form role="form">
+            <div class="form-group">
+                <label>New task</label>
+                <input type="text" class="form-control" placeholder="Enter email" data-bind="value:NewTaskName">
+            </div>
+            <div  class="form-group">
+                <button type="button" data-bind="css:ButtonClassForNewTaskImportant(), click:ToggleNewTaskImportant">Important</button>
+                <button type="button" data-bind="css:ButtonClassForNewTaskUrgent(), click:ToggleNewTaskUrgent">Urgent</button>
+                <button type="button" class="btn btn-default btn-success pull-right" data-bind="click:AddNewTask">Add</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<div class='row  bg-warning' >
+
+      <div class="col-lg-6 col-md-6 col-sm-6">
+
+          <div class="s-sprint-container">
+              <div class="s-sprint-item ">
+                  <div class="title">
+                      <h4>Rushing tasks</h4>
+                  </div>
+                  <div class="task-container" data-bind="foreach:UITasks">
+
+                      <div class="task-item ">
+                          <button type="button" href="#" class="btn btn-danger pull-right btn-finish" data-bind="click:$parent.FinishTask.bind($data, $parent), visible: !$data.IsFinished(), enable: !$data.IsFinished()">
+                              Done
+                          </button>
+                          <button type="button" href="#" class="btn btn-danger pull-right" data-bind="click:$parent.DeleteTask.bind($data, $parent.UITasks), visible: $data.IsFinished(), enable: $data.IsFinished()">
+                              Remove
+                          </button>
+                          <a href="#">
+                              <span data-bind="text:$data.TaskName">Prepare the school bag </span>
+                              <span data-bind="text:$data.TaskStatus, visible: $data.IsFinished()" class="badge"></span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6">
+
+          <div class="s-sprint-container">
+              <div class="s-sprint-item ">
+                  <div class="title">
+                      <h4>Important tasks</h4>
+                  </div>
+                  <div class="task-container" data-bind="foreach:UNITasks">
+
+                      <div class="task-item ">
+                          <button type="button" href="#" class="btn btn-danger pull-right btn-finish" data-bind="click:$parent.FinishTask.bind($data, $parent), visible: !$data.IsFinished(), enable: !$data.IsFinished()">
+                              Done
+                          </button>
+                          <button type="button" href="#" class="btn btn-danger pull-right" data-bind="click:$parent.DeleteTask.bind($data, $parent.UNITasks), visible: $data.IsFinished(), enable: $data.IsFinished()">
+                              Remove
+                          </button>
+                          <a href="#">
+                              <span data-bind="text:$data.TaskName">Prepare the school bag </span>
+                              <span data-bind="text:$data.TaskStatus, visible: $data.IsFinished()" class="badge"></span>
+                          </a>
+                      </div>
+
+
+                  </div>
+              </div>
+          </div>
+
+      </div>
+</div>
+
+<div class='row  bg-warning'>
+
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="s-sprint-container">
+            <div class="s-sprint-item ">
+                <div class="title">
+                    <h4>Not really important</h4>
+                </div>
+                <div class="task-container" data-bind="foreach:NUITasks">
+
+                    <div class="task-item ">
+                        <button type="button" href="#" class="btn btn-danger pull-right btn-finish" data-bind="click:$parent.FinishTask.bind($data, $parent), visible: !$data.IsFinished(), enable: !$data.IsFinished()">
+                            Done
+                        </button>
+                        <button type="button" href="#" class="btn btn-danger pull-right" data-bind="click:$parent.DeleteTask.bind($data, $parent.NUITasks), visible: $data.IsFinished(), enable: $data.IsFinished()">
+                            Remove
+                        </button>
+                        <a href="#">
+                            <span data-bind="text:$data.TaskName">Prepare the school bag </span>
+                            <span data-bind="text:$data.TaskStatus, visible: $data.IsFinished()" class="badge"></span>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6" >
+        <div class="s-sprint-container">
+            <div class="s-sprint-item ">
+                <div class="title">
+                    <h4>Throw it away, please!</h4>
+                </div>
+                <div class="task-container" data-bind="foreach:NUNITasks">
+
+                    <div class="task-item ">
+                        <button type="button" href="#" class="btn btn-danger pull-right btn-finish" data-bind="click:$parent.FinishTask.bind($data, $parent), visible: !$data.IsFinished(), enable: !$data.IsFinished()">
+                            Done
+                        </button>
+                        <button type="button" href="#" class="btn btn-danger pull-right" data-bind="click:$parent.DeleteTask.bind($data, $parent.NUNITasks), visible: $data.IsFinished(), enable: $data.IsFinished()">
+                            Remove
+                        </button>
+                        <a href="#">
+                            <span data-bind="text:$data.TaskName">Prepare the school bag </span>
+                            <span data-bind="text:$data.TaskStatus, visible: $data.IsFinished()" class="badge"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

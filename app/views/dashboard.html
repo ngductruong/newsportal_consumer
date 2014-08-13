@@ -1,0 +1,62 @@
+﻿<div class='row'>
+    <div class="col-lg-12 col-md-12 col-sm-12 bg-warning" style="min-height: 100px;">
+    <h3 style="padding-top:5px;margin-top:0px">Demonstration of task managing</h3>
+    <ul>
+        <li>KnockoutJS for data binding</li>
+        <li>DurandalJS for routing & view composition</li>
+        <li>RequireJS for module loading</li>
+        <li>Data is stored in WebAPI application</li>
+    </ul>
+     </div>
+</div>
+
+<div class='row'>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 bg-warning" style="min-height: 100px;">
+        <form role="form">
+            <div class="form-group">
+                <label>New task</label>
+                <input type="text" class="form-control" placeholder="Enter task name" data-bind="value:NewTaskName">
+            </div>
+        </form>
+        <div  class="form-group">
+            <button type="button" class="btn btn-default btn-success pull-right" data-bind="click:AddNewTask">Add new (success)</button>
+            &nbsp;
+            <button type="button" class="btn btn-default btn-danger pull-right" data-bind="click:AddNewFailedTask" style="margin-right: 10px;
+">Add new (error)</button>
+        </div>
+
+    </div>
+
+</div>
+
+<div class='row  bg-warning' >
+
+      <div class="col-lg-12 col-md-12 col-sm-12">
+
+          <div class="s-sprint-container">
+              <div class="s-sprint-item ">
+                   <div class="task-container" data-bind="foreach:UITasks">
+
+                      <div class="task-item ">
+                          <button type="button" href="#" class="btn btn-danger pull-right btn-finish" data-bind="click:$parent.FinishTask.bind($data, $parent), visible: !$data.IsFinished(), enable: !$data.IsFinished()">
+                              Done
+                          </button>
+                          <button type="button" href="#" class="btn btn-danger pull-right" data-bind="click:$parent.DeleteTask.bind($data, $parent.UITasks), visible: $data.IsFinished(), enable: $data.IsFinished()">
+                              Remove
+                          </button>
+                          <a href="#">
+                              <span data-bind="text:$data.TaskName">Prepare the school bag </span>
+                              <span data-bind="text:$data.TaskStatus, visible: $data.IsFinished()" class="badge"></span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+</div>
+
+
+
+
