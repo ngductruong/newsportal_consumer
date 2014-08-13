@@ -15,5 +15,6 @@ define(['knockout','../business/utils'], function(ko, UtilsBO) {
         self.ModifiedDate = ko.observable();
         self.ChildDirectories = ko.observableArray();
 
+        // Commit new file
     };
 });
