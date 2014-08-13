@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-// Modify by TruongND
+
 define(['knockout','../entity/directory','../entity/unit','../entity/asperaserver','../entity/user','../entity/sessionresult'
     ,'../entity/metadata','../entity/task','../business/function','../business/utils'],
     function(ko, Directory, Unit, AsperaServer, User, SessionResult, Metadata, Task, FunctionBO, UtilsBO) {

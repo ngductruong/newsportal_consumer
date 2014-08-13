@@ -5,6 +5,9 @@
  *
  */
 
+/*
+Plug some comment here
+*/
 
 requirejs.config({
 
