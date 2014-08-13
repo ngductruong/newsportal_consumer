@@ -16,5 +16,7 @@ define(['knockout','../business/utils'], function(ko, UtilsBO) {
         self.ChildDirectories = ko.observableArray();
 
         // Commit new file
+
+        // This is not sync-ed
     };
 });
