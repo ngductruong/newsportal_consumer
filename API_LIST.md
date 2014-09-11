@@ -18,6 +18,10 @@ API Key
 - 96a309941b3ca378fb9ca9fed1e750be || Full access
 - 360b3d3ff656df898e8d4f0865cb7e7b || Limited access
 
+```sh
+Authorization : Basic 96a309941b3ca378fb9ca9fed1e750be 
+```
+
 API Endpoint
 --------------
 ```sh
